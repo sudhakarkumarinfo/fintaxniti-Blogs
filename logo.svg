@@ -1,0 +1,446 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Squircle Gradient -->
+    <linearGradient id="sqGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066FF" />
+      <stop offset="35%" stop-color="#0044CC" />
+      <stop offset="70%" stop-color="#002B8C" />
+      <stop offset="100%" stop-color="#00144D" />
+    </linearGradient>
+
+    <!-- Squircle Surface Sheen -->
+    <linearGradient id="sqSheen" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.38" />
+      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.08" />
+      <stop offset="60%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Bevel Border Gradient -->
+    <linearGradient id="bevelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#1D4ED8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#001B5E" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Circular Ring Gradient (Cyan-Blue to Electric Green) -->
+    <linearGradient id="ringGrad" x1="10%" y1="90%" x2="90%" y2="10%">
+      <stop offset="0%" stop-color="#0080FF" />
+      <stop offset="30%" stop-color="#00D2FF" />
+      <stop offset="65%" stop-color="#22E048" />
+      <stop offset="100%" stop-color="#0ABF2E" />
+    </linearGradient>
+
+    <!-- Inner White Disc Depth -->
+    <radialGradient id="discGrad" cx="42%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="75%" stop-color="#F4F8FD" />
+      <stop offset="100%" stop-color="#DEE9F7" />
+    </radialGradient>
+
+    <!-- 3D 'F' Primary Gradient -->
+    <linearGradient id="fBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0088FF" />
+      <stop offset="40%" stop-color="#0055D4" />
+      <stop offset="85%" stop-color="#00359E" />
+      <stop offset="100%" stop-color="#002270" />
+    </linearGradient>
+
+    <!-- F Upper Specular Highlight -->
+    <linearGradient id="fTopHighlight" x1="0%" y1="0%" x2="100%" y2="20%">
+      <stop offset="0%" stop-color="#60B8FF" />
+      <stop offset="50%" stop-color="#0077FF" />
+      <stop offset="100%" stop-color="#004CBD" />
+    </linearGradient>
+
+    <!-- F Mid Blade Gradient -->
+    <linearGradient id="fMidBlade" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#0091FF" />
+      <stop offset="60%" stop-color="#0062E6" />
+      <stop offset="100%" stop-color="#003EAA" />
+    </linearGradient>
+
+    <!-- Green 3D 'N' / Arrow Front Gradient -->
+    <linearGradient id="nGreenFront" x1="0%" y1="100%" x2="90%" y2="0%">
+      <stop offset="0%" stop-color="#129627" />
+      <stop offset="25%" stop-color="#24C93C" />
+      <stop offset="70%" stop-color="#3BF057" />
+      <stop offset="100%" stop-color="#60FA75" />
+    </linearGradient>
+
+    <!-- Green Fold Depth (Underside/Inner Curve) -->
+    <linearGradient id="nGreenBack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#075213" />
+      <stop offset="50%" stop-color="#0D731D" />
+      <stop offset="100%" stop-color="#1BA830" />
+    </linearGradient>
+
+    <!-- Financial Bar Chart Columns -->
+    <linearGradient id="bar1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00C4FF" />
+      <stop offset="100%" stop-color="#007BFF" />
+    </linearGradient>
+
+    <linearGradient id="bar2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0080FF" />
+      <stop offset="100%" stop-color="#004CBD" />
+    </linearGradient>
+
+    <!-- Orbital Swoosh Gradient -->
+    <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="45%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+
+    <!-- Rupee Symbol Gradient -->
+    <linearGradient id="rupeeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0047AB" />
+      <stop offset="100%" stop-color="#002166" />
+    </linearGradient>
+
+    <!-- Drop Shadows for Real 3D Stacking -->
+    <filter id="shadowSquircle" x="-8%" y="-8%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#001848" flood-opacity="0.55" />
+    </filter>
+
+    <filter id="shadowDisc" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#001B44" flood-opacity="0.32" />
+    </filter>
+
+    <filter id="shadowEmblem" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="8" stdDeviation="7" flood-color="#001A40" flood-opacity="0.28" />
+    </filter>
+
+    <filter id="arrowShadow" x="-15%" y="-15%" width="135%" height="135%">
+      <feDropShadow dx="4" dy="8" stdDeviation="6" flood-color="#05300B" flood-opacity="0.38" />
+    </filter>
+  </defs>
+
+  <!-- ==================== 1. MAIN 3D SQUIRCLE CONTAINER ==================== -->
+  <rect
+    x="24"
+    y="24"
+    width="464"
+    height="464"
+    rx="108"
+    ry="108"
+    fill="url(#sqGrad)"
+    filter="url(#shadowSquircle)"
+  />
+
+  <!-- Metallic Bevel Rim -->
+  <rect
+    x="24"
+    y="24"
+    width="464"
+    height="464"
+    rx="108"
+    ry="108"
+    fill="none"
+    stroke="url(#bevelGrad)"
+    stroke-width="5"
+  />
+
+  <!-- Glossy Reflection Sheen -->
+  <rect
+    x="26"
+    y="26"
+    width="460"
+    height="460"
+    rx="106"
+    ry="106"
+    fill="url(#sqSheen)"
+  />
+
+  <!-- Subtle Top Light Arc -->
+  <path
+    d="M 68 84 Q 256 36 444 84"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="3"
+    stroke-opacity="0.4"
+    stroke-linecap="round"
+  />
+
+  <!-- ==================== 2. CIRCULAR MEDALLION DISC ==================== -->
+  <!-- Outer Accent Glow / Shadow -->
+  <circle
+    cx="256"
+    cy="256"
+    r="194"
+    fill="none"
+    stroke="#000000"
+    stroke-opacity="0.12"
+    stroke-width="12"
+    filter="url(#shadowDisc)"
+  />
+
+  <!-- Vibrant Dual-Tone Frame Ring (Cyan to Lime) -->
+  <circle
+    cx="256"
+    cy="256"
+    r="192"
+    fill="none"
+    stroke="url(#ringGrad)"
+    stroke-width="14"
+  />
+
+  <!-- Pure White Embossed Inner Disc -->
+  <circle
+    cx="256"
+    cy="256"
+    r="184"
+    fill="url(#discGrad)"
+  />
+
+  <!-- Disc Inner Rim Shadow for Inset Depth -->
+  <circle
+    cx="256"
+    cy="256"
+    r="184"
+    fill="none"
+    stroke="#002B75"
+    stroke-opacity="0.08"
+    stroke-width="4"
+  />
+
+  <!-- ==================== 3. EMBLEM COMPONENTS ==================== -->
+  <g filter="url(#shadowEmblem)">
+
+    <!-- A. Rising Financial Bar Columns -->
+    <g id="financial-bars">
+      <!-- Column 1 (Left - Cyan/Blue) -->
+      <rect
+        x="272"
+        y="222"
+        width="20"
+        height="62"
+        rx="5"
+        fill="url(#bar1Grad)"
+      />
+      <rect
+        x="272"
+        y="222"
+        width="20"
+        height="6"
+        rx="3"
+        fill="#7DD3FC"
+        fill-opacity="0.85"
+      />
+
+      <!-- Column 2 (Middle - Royal Blue) -->
+      <rect
+        x="300"
+        y="194"
+        width="22"
+        height="90"
+        rx="5"
+        fill="url(#bar2Grad)"
+      />
+      <rect
+        x="300"
+        y="194"
+        width="22"
+        height="7"
+        rx="3.5"
+        fill="#93C5FD"
+        fill-opacity="0.85"
+      />
+
+      <!-- Column 3 (Right - Solid Vibrant Green Pillar) -->
+      <rect
+        x="328"
+        y="172"
+        width="24"
+        height="136"
+        rx="6"
+        fill="url(#nGreenFront)"
+      />
+      <rect
+        x="328"
+        y="172"
+        width="24"
+        height="8"
+        rx="4"
+        fill="#86EFAC"
+        fill-opacity="0.9"
+      />
+    </g>
+
+    <!-- B. The Bold 3D 'F' (Finance / FinTax) -->
+    <!-- Lower stem & hook of F -->
+    <path
+      d="M 124 178
+         C 124 150 142 136 172 136
+         L 316 136
+         C 328 136 332 144 324 154
+         C 316 164 300 178 286 182
+         C 272 186 240 186 208 186
+         L 194 186
+         C 180 186 174 194 174 206
+         L 174 220
+         L 254 220
+         C 268 220 274 228 266 238
+         C 258 248 244 260 228 262
+         C 214 264 192 264 174 264
+         L 174 316
+         C 174 346 162 366 138 368
+         C 128 368 124 358 124 346
+         L 124 178 Z"
+      fill="url(#fBlueGrad)"
+    />
+
+    <!-- F Upper Sweeping 3D Top Bar Highlight -->
+    <path
+      d="M 132 174
+         C 132 152 148 140 174 140
+         L 312 140
+         C 320 140 324 146 318 152
+         C 310 160 296 174 282 178
+         C 270 182 236 182 206 182
+         L 186 182
+         C 174 182 168 188 168 198
+         L 168 220
+         L 142 220
+         C 135 220 132 208 132 194
+         Z"
+      fill="url(#fTopHighlight)"
+    />
+
+    <!-- F Middle Blade Specular Highlight -->
+    <path
+      d="M 174 222
+         L 252 222
+         C 262 222 266 228 260 234
+         C 252 244 240 252 226 254
+         L 174 254
+         Z"
+      fill="url(#fMidBlade)"
+    />
+
+    <!-- C. Indian Rupee Symbol (₹) - Authentic Slanted Glyph matching Fintaxniti.png -->
+    <g id="logo-indian-rupee-sign" transform="translate(182, 280) skewX(-13) scale(0.24) translate(-40, 0)">
+      <!-- Subtle soft shadow (exact matching vector shifted 1px down-right) -->
+      <path
+        d="M153 23h41l15-23H55L40 23h26c27 0 52 2 62 25H55L40 71h91v1c0 17-14 43-60 43H48v22l90 113h41L85 133c39-2 75-24 80-62h29l15-23h-45c-1-9-5-18-11-25z"
+        transform="translate(3, 4)"
+        fill="#001844"
+        opacity="0.25"
+      />
+      <!-- Official Solid Glyph filled with rich corporate blue gradient -->
+      <path
+        d="M153 23h41l15-23H55L40 23h26c27 0 52 2 62 25H55L40 71h91v1c0 17-14 43-60 43H48v22l90 113h41L85 133c39-2 75-24 80-62h29l15-23h-45c-1-9-5-18-11-25z"
+        fill="url(#rupeeGrad)"
+      />
+    </g>
+
+    <!-- D. Green 3D 'N' Curve, Swoosh & Soaring Growth Arrow -->
+    <!-- Shadow for Green Arrow and ribbon -->
+    <g filter="url(#arrowShadow)">
+      <!-- Green ribbon under-loop / Fold transition -->
+      <path
+        d="M 206 264
+           C 230 262 262 282 278 308
+           C 294 334 324 378 358 376
+           C 368 376 372 366 372 350
+           L 372 268
+           C 372 238 358 200 348 184
+           L 326 218
+           C 334 234 344 262 344 288
+           L 344 340
+           C 334 344 316 324 300 298
+           C 282 268 250 248 218 252
+           Z"
+        fill="url(#nGreenBack)"
+      />
+
+      <!-- Dynamic Green Ribbon Foreground Swoop -->
+      <path
+        d="M 218 256
+           C 246 254 278 282 296 312
+           C 314 342 334 378 362 376
+           C 374 376 376 362 376 344
+           L 376 196
+           L 348 196
+           L 348 338
+           C 336 340 322 320 306 294
+           C 288 266 256 244 224 248
+           Z"
+        fill="url(#nGreenFront)"
+      />
+
+      <!-- Ascending Growth Arrow Soaring Outward (Breaking the Frame 3D) -->
+      <!-- Arrow Stem -->
+      <path
+        d="M 288 274
+           C 324 248 360 198 392 148
+           L 418 168
+           C 382 216 344 272 306 298
+           Z"
+        fill="url(#nGreenFront)"
+      />
+
+      <!-- Arrow Head -->
+      <path
+        d="M 438 98
+           L 434 182
+           C 434 188 426 190 422 186
+           L 396 160
+           L 364 196
+           C 358 202 348 194 354 188
+           L 386 152
+           L 360 126
+           C 356 122 358 114 364 114
+           L 434 100
+           C 437 99 439 99 438 98 Z"
+        fill="url(#nGreenFront)"
+      />
+      <!-- Arrow Tip Specular Light -->
+      <polygon
+        points="438,98 364,114 402,148"
+        fill="#A7F3D0"
+        fill-opacity="0.6"
+      />
+    </g>
+
+    <!-- E. Dynamic Blue Orbital Swoosh Ring (Enclosing Bottom-Left) -->
+    <!-- White Backing Stroke for crisp pop against background -->
+    <path
+      d="M 64 346
+         C 82 404 156 422 226 398
+         C 264 384 286 364 286 354
+         C 286 348 278 348 270 352
+         C 214 380 144 366 112 324
+         C 96 304 88 284 84 272
+         C 80 262 72 268 70 278
+         C 66 298 64 324 64 346 Z"
+      fill="#FFFFFF"
+    />
+
+    <!-- Cyan-Blue Gradient Core -->
+    <path
+      d="M 68 344
+         C 86 398 154 416 222 394
+         C 258 382 278 364 278 356
+         C 278 352 272 352 266 356
+         C 212 378 146 364 116 326
+         C 100 306 92 288 88 276
+         C 86 270 78 274 76 282
+         C 72 300 70 324 68 344 Z"
+      fill="url(#orbitGrad)"
+    />
+
+    <!-- Orbital Light Reflection Streak -->
+    <path
+      d="M 94 368
+         C 134 400 186 404 234 388"
+      fill="none"
+      stroke="#BAE6FD"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-opacity="0.8"
+    />
+
+  </g>
+</svg>
